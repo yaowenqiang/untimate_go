@@ -1,6 +1,12 @@
 package main
 import ( "fmt" )
 
+type example struct {
+    flag bool
+    counter int16
+    pi float32
+}
+
 func main() {
     var a int
     var b string
@@ -24,6 +30,45 @@ func main() {
     aaa := int32(10)
     fmt.Printf("var aaa int32(10) \t %T [%v]\n", aaa, aaa)
 
+    var e1 example
+
+    fmt.Printf("%+v\n", e1)
+
+    e2 := example {
+        flag: true,
+        counter: 10,
+        pi: 3.141592,
+    }
+
+    fmt.Println("Flag", e2.flag)
+    fmt.Println("Counter", e2.counter)
+    fmt.Println("Pi", e2.pi)
+
+
+    //Declare a variable of an anonymous type set to its zero value
+    var e11 struct {
+        flag bool
+        counter int16
+        pi float32
+    }
+
+    //Display the value
+    fmt.Printf("%+v\n", e11)
+
+    //Declare a variable of an anonymous type and init using a struct iteral
+
+
+    e22 := struct {
+        flag bool
+        counter int16
+        pi float32
+    } {
+        flag: true,
+        counter: 10,
+        pi: 3.1415926,
+    }
+    fmt.Printf("%+v\n", e11)
+    fmt.Printf("%+v\n", e22)
 
     fmt.Println("hello world")
 }
