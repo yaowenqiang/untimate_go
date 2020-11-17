@@ -88,9 +88,8 @@ func main() {
     var n nancy
     var bl bill
     //b = n
-    //bl = bill(n)
-    bl = e22
-    fmt.Println(bl,n)
+    bl = bill(n)
+    fmt.Println(b,n)
 
     fmt.Println("hello world")
 }
