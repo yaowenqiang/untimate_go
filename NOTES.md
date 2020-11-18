@@ -63,4 +63,4 @@ There have been studies that have researched the number of bugs you can expect t
 
 
 
-
+> go build -gcflags -m=2
