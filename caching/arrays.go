@@ -1,4 +1,4 @@
-package main
+package caching
 import ("fmt")
 
 const (
@@ -15,7 +15,7 @@ type data struct {
 
 var list *data
 
-func main() {
+func init() {
     var last *data
     for row := 0; row < rows; row++ {
         for col := 0; col < cols; col++ {
@@ -36,6 +36,17 @@ func main() {
         }
 
     }
+
+    var ctr int
+    d := list
+    for d != nil {
+        ctr++
+        d = d.p
+    }
+
+    fmt.Println("Elements in the link list", ctr)
+    fmt.Println("Elements in the matrix", rows*cols)
+
 }
 
 func LinkedListTraverse() int {
@@ -45,7 +56,7 @@ func LinkedListTraverse() int {
         if d.v == 0xFF {
             ctr++
         }
-        d = v.p
+        d = d.p
     }
     return ctr
 }

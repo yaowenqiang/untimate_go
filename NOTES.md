@@ -64,3 +64,19 @@ There have been studies that have researched the number of bugs you can expect t
 
 
 > go build -gcflags -m=2
+
+
+
+# GOGC
+
+> https://www.ardanlabs.com/blog/2018/12/garbage-collection-in-go-part1-semantics.html
+
+# arrays
+
+> go test  -run none -bench . -benchtime 3s
+
+
+
+> TLB
+> https://www.geeksforgeeks.org/translation-lookaside-buffer-tlb-in-paging/
+
