@@ -27,8 +27,8 @@ func sendNotification(n notifier) {
 }
 
 func main() {
-    duration(42).notify()
+    //duration(42).notify()
     u := user{"Bill", "bill@bill.com"}
-    sendNotification(u)
+    sendNotification(&u)
 }
 
